@@ -1,0 +1,219 @@
+<<<<<<< HEAD
+<!-- <html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Student grade calculator</h1>
+      <div class="screen-body-item">
+        <div class="app">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="CHEMISTRY"
+              id="chemistry"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="HINDI"
+              id="hindi"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="MATHS"
+              id="maths"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="PHYSICS"
+              id="phy"
+            />
+          </div>
+          <div>
+            <input
+              type="button"
+              value="show Percentage"
+              class="form-button"
+              onclick="calculate()"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="form-group showdata">
+        <p id="showdata"></p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+-->
+
+<html>
+<head>
+    <style>
+        img {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 20px auto;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+        img.loaded {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lazy Loading Images</h1>
+    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20250113100739878238/how_to_get_60_marks_in_gate_cse_.webp" data-src="https://media.geeksforgeeks.org/wp-content/uploads/20250113100824388125/how_many_marks_required_in_gate_for_iit_bombay_cse_.webp" alt="Image1">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const lazyImages = document.querySelectorAll('img[data-src]');
+
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                        img.classList.add('loaded');  
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            lazyImages.forEach(img => {
+                imageObserver.observe(img);
+            });
+        });
+    </script>
+</body>
+</html>
+=======
+<!-- <html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Student grade calculator</h1>
+      <div class="screen-body-item">
+        <div class="app">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="CHEMISTRY"
+              id="chemistry"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="HINDI"
+              id="hindi"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="MATHS"
+              id="maths"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="PHYSICS"
+              id="phy"
+            />
+          </div>
+          <div>
+            <input
+              type="button"
+              value="show Percentage"
+              class="form-button"
+              onclick="calculate()"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="form-group showdata">
+        <p id="showdata"></p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+-->
+
+<html>
+<head>
+    <style>
+        img {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 20px auto;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+        img.loaded {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lazy Loading Images</h1>
+    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20250113100739878238/how_to_get_60_marks_in_gate_cse_.webp" data-src="https://media.geeksforgeeks.org/wp-content/uploads/20250113100824388125/how_many_marks_required_in_gate_for_iit_bombay_cse_.webp" alt="Image1">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const lazyImages = document.querySelectorAll('img[data-src]');
+
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                        img.classList.add('loaded');  
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            lazyImages.forEach(img => {
+                imageObserver.observe(img);
+            });
+        });
+    </script>
+</body>
+</html>
+>>>>>>> 43cb3da (komit baru)

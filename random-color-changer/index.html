@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body id="body">
+    <button onclick="changeColor()">Change Color</button>
+    <script>
+        const body = document.getElementById('body').style
+        const colors = ["red", "blue", "green", "pink", "white", "purple", "grey", "orange", "yellow"]
+
+        function changeColor() {
+            body.backgroundColor = colors[Math.floor(Math.random() * colors.length)]
+        }
+    </script>
+</body>
+</html>

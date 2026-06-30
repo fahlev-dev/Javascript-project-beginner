@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body id="body" style="margin: 0px">
+    <h2 style="margin-left: 45%; margin-top: 50vh">
+      Hex Color:<span id="hex"></span>
+    </h2>
+    <button onclick="changeColor()" style="margin-left: 50%">
+      Change color hexically 🙂
+    </button>
+
+    <script>
+      var body = document.getElementById("body").style;
+
+      function makeid(length) {
+        var result = "#";
+        var characters = "ABCDEF123456789";
+        var charactersLength = characters.length;
+        for (var i = 0; i < length; i++) {
+          result += characters.charAt(
+            Math.floor(Math.random() * characters.length),
+          );
+        }
+        return result;
+      }
+
+      function changeColor() {
+        const text = document.getElementById("hex");
+        const color = makeid(6);
+
+        text.innerText = color;
+        body.backgroundColor = color;
+      }
+    </script>
+  </body>
+</html>
